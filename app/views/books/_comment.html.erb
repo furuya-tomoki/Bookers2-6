@@ -16,6 +16,7 @@
   <% end %>
 </table>
 <%= form_with model:[@book,@book_comment], remote: true do |f| %>
+  <!-- remote: trueを追加　= js形式のリクエスト送信 -->
   <%= f.text_area :comment, size:"90x5" %>
   <%= f.submit '送信'%>
 <% end %>

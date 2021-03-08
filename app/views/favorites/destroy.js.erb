@@ -1,1 +1,3 @@
 $('#favorite-btn_<%= @book.id %>').html("<%= j(render partial: 'favorites/favorite-btn', locals: {book: @book}) %>");
+<!-- コメント用の非同期通信createアクション -->
+<!-- #favorites_buttons_ ~ @book.id %>の部分のHTMLだけ、renderで部分的に更新する処理 -->

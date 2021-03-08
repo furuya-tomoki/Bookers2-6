@@ -1,5 +1,7 @@
 <% if book.favorited_by?(current_user) %>
   <%= link_to book.favorites.count, book_favorites_path(book), method: :delete, remote: true, class: "fas fa-heart heart_red" %>
+    <!-- remote: trueを追加　= js形式のリクエスト送信 -->
 <% else %>
   <%= link_to book.favorites.count, book_favorites_path(book), method: :post, remote: true, class: "fas fa-heart heart_blue" %>
+    <!-- remote: trueを追加　= js形式のリクエスト送信 -->
 <% end %>
